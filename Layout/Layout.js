@@ -1,11 +1,13 @@
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 import React from 'react'
 
 const Layout = ({children}) => {
   return (
     <React.Fragment>
-        <div>Header</div>
+       <Header/>
         {children}
-        <div>Footer</div>
+        <Footer/>
     </React.Fragment>
   )
 }
