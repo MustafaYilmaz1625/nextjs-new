@@ -1,7 +1,9 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router';
 
 
 export default function Home({posts}) {
+  const router =useRouter()
   return (
     <div style={{marginTop:"3rem",marginBottom:'3rem'}}>
       <Head>
@@ -13,7 +15,7 @@ export default function Home({posts}) {
       <h1 className='title'>Home</h1>
       <h2>User List</h2>
       {posts?.map((user)=>(
-        <div key={user.id} style={{color:'yellow'}}>
+        <div key={user.id} onClick={()=>router.push(`user/${user.id}`)} style={{color:'yellow',cursor:'pointer'}}>
           {user.id}-{user.name}
         </div>
       ))}
