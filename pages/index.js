@@ -13,7 +13,7 @@ export default function Home({posts}) {
       <h1 className='title'>Home</h1>
       <h2>User List</h2>
       {posts?.map((user)=>(
-        <div key={user.id}>
+        <div key={user.id} style={{color:'yellow'}}>
           {user.id}-{user.name}
         </div>
       ))}
@@ -21,7 +21,7 @@ export default function Home({posts}) {
   )
 }
 
-export const getServerSideProps =async()=>{
+export const getStaticProps =async()=>{
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   const posts=await res.json();
 
