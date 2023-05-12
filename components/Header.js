@@ -1,11 +1,18 @@
 import React from 'react'
 import styles from "../styles/Header.module.css"
+import Link from 'next/link';
 
 const Header = () => {
   return (
     <div>
-      <h1 className={styles.title}>Header</h1>
-      <button className={styles.button}>Click</button>
+    <nav>
+      <ul>
+        <li><Link href="/">Home</Link></li>
+        <li><Link href="/about">About</Link></li>
+        <li><Link href="/product">Product</Link></li>
+      
+      </ul>
+    </nav>
     </div>
   );
 }
