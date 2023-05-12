@@ -1,5 +1,17 @@
 .title{
-     color: aqua;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width:20rem;
+     color: black;
+     padding: 10px;
+    background-color: aquamarine;
+
+}
+.title li {
+    float: left;
+    padding-right: 15px;
+    list-style: none 
 }
 .button {
     padding: 4px;
