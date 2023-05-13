@@ -1,3 +1,4 @@
+import Meta from "@/components/Meta";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 
@@ -20,6 +21,7 @@ const UserItem = ({ userData }) => {
 
   return (
     <div>
+      <Meta title={userData.title}/>
       <h1>User Item</h1>
       <p>
         <b>Full Name:</b> {userData?.name}
