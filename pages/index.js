@@ -12,7 +12,7 @@ export default function Home({ posts }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
+      {/* <div
         style={{
           position: "relative",
         }}
@@ -23,7 +23,7 @@ export default function Home({ posts }) {
           height={500}
           alt=""
         />
-      </div>
+      </div> */}
       <h1 className="title">Home</h1>
       <h2>User List</h2>
       {posts?.map((user) => (
@@ -40,7 +40,7 @@ export default function Home({ posts }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const res = await fetch("http://localhost:3000/api/users");
   const posts = await res.json();
 
   return {
